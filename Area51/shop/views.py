@@ -8,11 +8,11 @@ def Productlist(request):
     return render(request,'shop/product.html',mydict)
 
 def index(request):
-    products=Product.objects.all()
+    products = Product.objects.all()
     print(products)
-    n=len(products)
-    nSlides=ceil(n/4)
-    params={'no_of_slides':nSlides,'range':range(1,nSlides),'product':products}
+    n = len(products)
+    nSlides = ceil(n/4)
+    params = {'no_of_slides':nSlides,'range':range(1,nSlides),'product':products}
     return render(request,'shop/index.html',params)
 
 def About(request):
